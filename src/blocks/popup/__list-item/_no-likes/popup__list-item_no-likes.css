@@ -1,0 +1,6 @@
+.popup__list-item_no-likes {
+  max-width: none;
+  overflow: visible;
+  text-overflow: clip;
+  white-space: normal;
+}
