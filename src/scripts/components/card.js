@@ -31,10 +31,9 @@ export const createCardElement = (
   cardImage.src = data.link;
   cardImage.alt = data.name;
   cardElement.querySelector(".card__title").textContent = data.name;
-  likeCount.textContent = data.likes.length;
 
   const isLiked = data.likes.some((user) => user._id === userId);
-  setLikeButtonState(likeButton, isLiked);
+  updateLikeDisplay(likeButton, data, isLiked);
 
   if (data.owner._id === userId) {
     if (onDeleteCard) {
